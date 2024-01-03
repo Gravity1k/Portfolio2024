@@ -1,0 +1,474 @@
+body {
+    margin: 0;
+    font-family: Trebuchet MS, sans-serif;
+    background-color: #f4f4f4;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-image: url('img/webpageback.png'); 
+    background-size: cover;
+    background-attachment: fixed; 
+    background-position: center; 
+    background-repeat: no-repeat;
+  }
+  
+  a {
+    color: #000;
+  }
+  
+  /* header */
+
+  .ProjectCard div{
+    font-size: 20px;
+  }
+
+  .header {
+  background: rgba(255, 255, 255, 0.44);
+  background: rgba(255, 255, 255, 0.57);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+   width: 100%;
+   z-index: 3;
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;;
+  }
+  
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background: #7f29826e;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+    display: flex;
+    margin-left: auto;
+  }
+  
+  .header li a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+  }
+  
+  .header li a:hover,
+  .header .menu-btn:hover {
+    background-color: #f7f3f3;
+  }
+  
+  .header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+
+  .logo img {
+    width: 80px; 
+    height: 80px;
+}
+
+  
+  /* menu */
+  
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    
+  }
+  
+  /* menu icon */
+  
+  .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  
+  .header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  
+  /* 48em = 768px */
+  
+  @media (min-width: 48em) {
+    .header li {
+      float: left;
+    }
+    .header li a {
+      padding: 20px 30px;
+    }
+    .header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .header .menu-icon {
+      display: none;
+    }
+  }
+
+
+/* card one name */
+
+.NameCard {
+  position: absolute; 
+  left: 50%; 
+  top: 400px;
+  transform: translateX(-50%);
+  margin-bottom: 0px;
+  background: rgba(255, 255, 255, 0.44);
+  background: rgba(255, 255, 255, 0.57);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+
+}
+
+.NameCard h1{
+  font-size: 70px;
+  margin-bottom: 0px;
+  margin-left: 40px;
+}
+
+.NameCard h2{
+  font-size: 100px;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 0px;
+}
+
+.AboutMeCard,
+.SkillsCard {
+  display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.44);
+    background: rgba(255, 255, 255, 0.57);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+    margin-top: 20px; 
+    padding: 20px; 
+    max-width: 800px; 
+    width: 100%; 
+    margin: 0 auto; 
+}
+
+
+/* Positioning for each card */
+.AboutMeCard{
+  top: 900px; 
+  left: 10px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.ProjectCard {
+  flex: 0 0 calc(33.33% - 20px);
+  margin-bottom: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.44);
+  background: rgba(255, 255, 255, 0.57);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  box-sizing: border-box;
+
+}
+
+.SkillsHeader {
+  top: 1600px; 
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative; 
+}
+
+
+.ProjectsContainer {
+  position: relative;
+  top: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 100%; 
+  margin-left: 80px;
+  margin-right: 40px;
+  text-align: center;
+}
+
+.ProjectHeader {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  top: 1200px;
+  
+}
+
+.ProjectHeader h1 {
+  color: #f4f4f4;
+  font-size: 80px;
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.44);
+  background: rgba(0, 0, 0, 0.57);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  box-sizing: border-box;
+}
+
+#aboutMe h2 {
+  display: flex;
+  align-items: center; 
+}
+
+#autoType {
+  display: inline-block;
+  font-size: 60px;
+  color: #7f2982;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.caretAnimation {
+  animation-name: caret;
+  animation-duration: 1s;
+  animation-iteration-count: 2;
+}
+
+@keyframes caret {
+  10% {border-right: none;}
+  100% {border-right: 2px solid #eeecec;}
+}
+
+
+.SkillsHeader h1 {
+  color: #f4f4f4;
+  font-size: 80px;
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.44);
+  background: rgba(0, 0, 0, 0.57);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  box-sizing: border-box;
+}
+
+.SkillsContainer{
+  position: relative;
+  top: 1600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 100%; 
+  margin-left: 80px;
+  margin-right: 40px;
+}
+
+.SkillCard img {
+  display: block;
+  margin: 0 auto;
+}
+
+.SkillCard h2 {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.SkillCard {
+  flex: 0 0 calc(33.33% - 20px);
+  margin-bottom: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.44);
+  background: rgba(255, 255, 255, 0.57);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+
+.ContactHeader h1 {
+  color: #f4f4f4;
+  font-size: 80px;
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.44);
+  background: rgba(0, 0, 0, 0.57);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  box-sizing: border-box;
+}
+
+.ContactContainer{
+  position: relative;
+  top: 1900px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 100%; 
+  margin-left: 80px;
+  margin-right: 40px;
+  justify-content: center; 
+  align-items: center;
+}
+
+.ContactCard {
+  width: 60%;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  background: rgba(255, 255, 255, 0.44);
+  background: rgba(255, 255, 255, 0.57);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  box-sizing: border-box;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.ContactHeader {
+  top: 1900px; 
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative; 
+}
+
+.ContactCard form label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+  
+}
+
+.ContactCard form input,
+.ContactCard form textarea {
+  width: 95%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.ContactCard form textarea {
+  resize: vertical; 
+}
+
+.ContactCard form button {
+  background-color: #7f2982;
+  color: #f4f4f4;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  
+}
+
+.ContactCard form button:hover {
+  background-color: #7f29826e;
+}
+
+.ContactCard h3 {
+  text-align: center; 
+  color: #7f2982;
+}
+
+.ContactCard h2 {
+  text-align: center; 
+  color: #7f2982;
+}
+
+.ProjectImageContainer {
+  margin: 0 auto;
+}
