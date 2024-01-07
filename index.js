@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function() {
 var dataset = [" a Fullstack Developer"];
 var datasetIndex = 0;
 var data;
-var pause = 2200;
-var addTime = 100;
+var pause = 2950;
+var addTime = 110;
 var removeTime = 150;
 var letterIndex = 0;
 var currentInterval;
