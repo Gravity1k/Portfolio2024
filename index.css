@@ -1,17 +1,24 @@
 body {
-    margin: 2px;
-    font-family: Trebuchet MS, sans-serif;
-    background-color: #f4f4f4;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    background-image: url('img/webpageback.png'); 
-    background-size: cover;
-    background-attachment: fixed; 
-    background-position: center; 
-    background-repeat: no-repeat;
-  }
-  
+  margin: 2px;
+  overflow-x: hidden;
+  font-family: Trebuchet MS, sans-serif;
+  background-color: #f4f4f4;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-image: url('img/webpageback.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+  .AboutMeCard
+.ProjectsContainer,
+.SkillsContainer,
+.ContactContainer {
+  max-width: 100%; /* Ensure the container does not exceed the viewport width */
+  overflow-x: hidden; /* Hide horizontal overflow */
+}
   a {
     color: #000;
   }
@@ -152,6 +159,10 @@ body {
   .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     top: 0;
   }
+
+  .ProjectCard img {
+    max-width: 300px; /* Ensure images are responsive */
+  }
   
   /* 48em = 768px */
   
@@ -189,6 +200,7 @@ body {
   -webkit-backdrop-filter: blur(9.5px);
   text-align: center;
 
+
 }
 
 .NameCard h1{
@@ -218,7 +230,7 @@ body {
     margin-top: 20px; 
     padding: 20px; 
     max-width: 800px; 
-    width: 100%; 
+    width: 90%; 
     margin: 0 auto; 
 }
 
@@ -297,14 +309,16 @@ body {
 }
 
 #autoType {
-  display: inline-block;
+  display: block;
   font-size: 60px;
   color: #7f2982;
-  white-space: nowrap;
+  white-space: normal;
   overflow: hidden;
+  word-wrap: break-word;
   margin-left: 20px;
   margin-top: 10px;
   margin-right: 20px;
+  max-width: 90%
 }
 
 .caretAnimation {
@@ -481,3 +495,97 @@ body {
 .github {
   margin-top: 60px;
 }
+
+@media (max-width: 767px) {
+  .header {
+    position: relative; /* Remove fixed position for smaller screens */
+  }
+
+  .ProjectsContainer {
+    justify-content: center; /* Center projects horizontally */
+    text-align: center; /* Center projects within container */
+  }
+
+  .header ul {
+    display: none; /* Hide the menu by default for smaller screens */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #7f29826e;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+  }
+  .header li {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+  .header li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+  }
+  .header .menu-btn {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+  .header .menu-btn:checked ~ .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ContactContainer {
+    width: 100%; /* Adjust the width of the contact container */
+    max-width: none; /* Remove max-width to allow full width */
+    margin-left: 0;
+    margin-right: 0; /* Center the container horizontally */
+    padding-left: 0; /* Remove padding if necessary */
+    padding-right: 0; /* Remove padding if necessary */
+    box-sizing: border-box; /* Include padding and border in the total width */
+  }
+}
+
+
+/* Tablets and larger */
+@media (min-width: 768px) {
+  .header {
+    position: fixed;
+    z-index: 3;
+  }
+  .header ul {
+    display: flex;
+    margin-left: auto;
+  }
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu-btn {
+    display: none;
+  }
+  .header .menu {
+    display: flex;
+    flex-direction: row;
+    max-height: none;
+  }
+
+  
+}
+
+/* Larger screens */
+@media (min-width: 1200px) {
+  .ProjectsContainer,
+  .SkillsContainer,
+  .ContactContainer {
+    margin-left: 120px;
+    margin-right: 80px;
+  }
+}
+
