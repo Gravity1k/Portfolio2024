@@ -12,7 +12,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
-  .AboutMeCard
+
+.AboutMeCard,
 .ProjectsContainer,
 .SkillsContainer,
 .ContactContainer {
@@ -44,6 +45,10 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+  }
+
+  .menu-btn{
+    visibility: hidden;
   }
   
   .header ul {
@@ -373,9 +378,9 @@ body {
 }
 
 .SkillCard {
-  flex: 0 0 calc(33.33% - 20px);
+  width: 30%; /* Set a percentage width */
+  padding: 3%; /* Set a percentage padding */
   margin-bottom: 20px;
-  padding: 20px;
   background: rgba(255, 255, 255, 0.44);
   background: rgba(255, 255, 255, 0.57);
   border-radius: 16px;
@@ -506,6 +511,16 @@ body {
     text-align: center; /* Center projects within container */
   }
 
+  .ProjectCard {
+    white-space: normal;
+    width: 100%;
+  }
+
+  .ProjectImageContainer {
+    width: 100%;
+    align-items: center;
+  }
+
   .header ul {
     display: none; /* Hide the menu by default for smaller screens */
     position: absolute;
@@ -540,13 +555,85 @@ body {
     align-items: center;
   }
   .ContactContainer {
-    width: 100%; /* Adjust the width of the contact container */
-    max-width: none; /* Remove max-width to allow full width */
+    width: 100%; 
+    max-width: none; 
     margin-left: 0;
-    margin-right: 0; /* Center the container horizontally */
-    padding-left: 0; /* Remove padding if necessary */
-    padding-right: 0; /* Remove padding if necessary */
-    box-sizing: border-box; /* Include padding and border in the total width */
+    margin-right: 0; 
+    padding-left: 0; 
+    padding-right: 0; 
+    box-sizing: border-box; 
+    text-align: center;
+  }
+
+  .ContactCard form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    
+  }
+  
+  .ContactCard form input,
+  .ContactCard form textarea {
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-left: 10px;
+  }
+  
+  .ContactCard form textarea {
+    resize: vertical; 
+  }
+  
+  .ContactCard form button {
+    background-color: #7f2982;
+    color: #f4f4f4;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    
+  }
+  
+  .ContactCard form button:hover {
+    background-color: #7f29826e;
+  }
+  
+  .ContactCard h3 {
+    text-align: center; 
+    color: #7f2982;
+  }
+  
+  .ContactCard h2 {
+    text-align: center; 
+    color: #7f2982;
+  }
+
+  .SkillCard {
+    width: 200px; /* Set a fixed width */
+    height: 200px; /* Set a fixed height */
+    margin-bottom: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.44);
+    background: rgba(255, 255, 255, 0.57);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .SkillsContainer{
+    margin: 0 !important;
+  }
+
+  .ContactHeader{
+    width: 90%;
   }
 }
 
