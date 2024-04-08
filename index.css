@@ -1,199 +1,206 @@
 body {
-  margin: 2px;
-  overflow-x: hidden;
-  font-family: Trebuchet MS, sans-serif;
-  background-color: #f4f4f4;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
-  background-image: url('img/webpageback.png');
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
+  line-height: 1.4;
+  margin: 0;
+  background-image: url('img/backgroundportfolio.png');
+
+
 }
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
 
 .AboutMeCard,
 .ProjectsContainer,
 .SkillsContainer,
 .ContactContainer {
-  max-width: 100%; /* Ensure the container does not exceed the viewport width */
-  overflow-x: hidden; /* Hide horizontal overflow */
+  max-width: 100%;
+  overflow-x: hidden;
 }
-  a {
-    color: #000;
-  }
-  
-  /* header */
 
-  .ProjectCard div{
-    font-size: 20px;
-  }
+a {
+  color: #000;
+}
 
-  .header {
+/* header */
+
+.ProjectCard div {
+  font-size: 20px;
+}
+
+.header {
   background: rgba(255, 255, 255, 0.44);
   background: rgba(255, 255, 255, 0.57);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(9.5px);
   -webkit-backdrop-filter: blur(9.5px);
-  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
   position: fixed;
-   width: 100%;
-   z-index: 3;
-    font-size: 25px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .menu-btn{
-    visibility: hidden;
-  }
-  
-  .header ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    overflow: hidden;
-    background: #7f29826e;
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(9.5px);
-    -webkit-backdrop-filter: blur(9.5px);
-    display: flex;
-    margin-left: auto;
-  }
-  
-  .header li a {
-    display: block;
-    padding: 20px 20px;
-    text-decoration: none;
-  }
-  
-  .header li a:hover,
-  .header .menu-btn:hover {
-    background-color: #f7f3f3;
-  }
-  
-  .header .logo {
-    display: block;
-    float: left;
-    font-size: 2em;
-    padding: 10px 20px;
-    text-decoration: none;
-  }
-
-  .logo img {
-    width: 80px; 
-    height: 80px;
+  width: 100%;
+  z-index: 3;
+  font-size: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-  
-  /* menu */
-  
-  .header .menu {
-    clear: both;
-    max-height: 0;
-    transition: max-height .2s ease-out;
-    
-  }
-  
-  /* menu icon */
-  
-  .header .menu-icon {
-    cursor: pointer;
-    display: inline-block;
-    float: right;
-    padding: 28px 20px;
-    position: relative;
-    user-select: none;
-  }
-  
-  .header .menu-icon .navicon {
-    background: #333;
-    display: block;
-    height: 2px;
-    position: relative;
-    transition: background .2s ease-out;
-    width: 18px;
-  }
-  
-  .header .menu-icon .navicon:before,
-  .header .menu-icon .navicon:after {
-    background: #333;
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
-  }
-  
-  .header .menu-icon .navicon:before {
-    top: 5px;
-  }
-  
-  .header .menu-icon .navicon:after {
-    top: -5px;
-  }
-  
-  /* menu btn */
-  
-  .header .menu-btn {
-    display: none;
-  }
-  
-  .header .menu-btn:checked ~ .menu {
-    max-height: 240px;
-  }
-  
-  .header .menu-btn:checked ~ .menu-icon .navicon {
-    background: transparent;
-  }
-  
-  .header .menu-btn:checked ~ .menu-icon .navicon:before {
-    transform: rotate(-45deg);
-  }
-  
-  .header .menu-btn:checked ~ .menu-icon .navicon:after {
-    transform: rotate(45deg);
-  }
-  
-  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-    top: 0;
+.menu-btn {
+  visibility: hidden;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background: #7f29826e;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  display: flex;
+  margin-left: auto;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f7f3f3;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 80px;
+  height: 80px;
+}
+
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked~.menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+.ProjectCard img {
+  max-width: 300px;
+  /* Ensure images are responsive */
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
   }
 
-  .ProjectCard img {
-    max-width: 300px; /* Ensure images are responsive */
+  .header li a {
+    padding: 20px 30px;
   }
-  
-  /* 48em = 768px */
-  
-  @media (min-width: 48em) {
-    .header li {
-      float: left;
-    }
-    .header li a {
-      padding: 20px 30px;
-    }
-    .header .menu {
-      clear: none;
-      float: right;
-      max-height: none;
-    }
-    .header .menu-icon {
-      display: none;
-    }
+
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
   }
+
+  .header .menu-icon {
+    display: none;
+  }
+}
 
 
 /* card one name */
 
 .NameCard {
-  position: absolute; 
-  left: 50%; 
+  position: absolute;
+  left: 50%;
   top: 400px;
   transform: translateX(-50%);
   margin-bottom: 0px;
@@ -208,13 +215,13 @@ body {
 
 }
 
-.NameCard h1{
+.NameCard h1 {
   font-size: 70px;
   margin-bottom: 0px;
   margin-left: 40px;
 }
 
-.NameCard h2{
+.NameCard h2 {
   font-size: 100px;
   margin-top: 10px;
   margin-left: 20px;
@@ -225,24 +232,24 @@ body {
 .AboutMeCard,
 .SkillsCard {
   display: flex;
-    flex-direction: column;
-    background: rgba(255, 255, 255, 0.44);
-    background: rgba(255, 255, 255, 0.57);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(9.5px);
-    -webkit-backdrop-filter: blur(9.5px);
-    margin-top: 20px; 
-    padding: 20px; 
-    max-width: 800px; 
-    width: 90%; 
-    margin: 0 auto; 
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.44);
+  background: rgba(255, 255, 255, 0.57);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  margin-top: 20px;
+  padding: 20px;
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 
 /* Positioning for each card */
-.AboutMeCard{
-  top: 900px; 
+.AboutMeCard {
+  top: 900px;
   left: 10px;
   position: relative;
   margin-top: 20px;
@@ -259,28 +266,28 @@ body {
   backdrop-filter: blur(9.5px);
   -webkit-backdrop-filter: blur(9.5px);
   box-sizing: border-box;
+  text-align: center;
 
 }
 
 .SkillsHeader {
-  top: 1600px; 
+  top: 1600px;
   text-align: center;
   margin-bottom: 20px;
   position: relative;
-   left: 20px;
 }
 
 
 .ProjectsContainer {
   position: relative;
   top: 1200px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 100%; 
-  margin-left: 80px;
-  margin-right: 80px;
-  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 30px 28px;
+  grid-gap: 30px;
+  align-items: stretch;
 }
 
 .ProjectHeader {
@@ -288,7 +295,7 @@ body {
   margin-bottom: 20px;
   position: relative;
   top: 1200px;
-  
+
 }
 
 .ProjectHeader h1 {
@@ -300,7 +307,6 @@ body {
   background: rgba(255, 255, 255, 0.44);
   background: rgba(0, 0, 0, 0.57);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(9.5px);
   -webkit-backdrop-filter: blur(9.5px);
   box-sizing: border-box;
@@ -309,7 +315,7 @@ body {
 #aboutMe h2 {
   display: flex;
   align-items: center;
-  text-align: center; 
+  text-align: center;
   line-height: 35px;
 }
 
@@ -333,8 +339,13 @@ body {
 }
 
 @keyframes caret {
-  10% {border-right: none;}
-  100% {border-right: 2px solid #eeecec;}
+  10% {
+    border-right: none;
+  }
+
+  100% {
+    border-right: 2px solid #eeecec;
+  }
 }
 
 
@@ -353,15 +364,17 @@ body {
   box-sizing: border-box;
 }
 
-.SkillsContainer{
+.SkillsContainer {
   position: relative;
   top: 1600px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 100%; 
-  margin-left: 80px;
-  margin-right: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  margin: 0 auto;
+  padding: 30px 28px;
+  grid-gap: 0px;
+  align-items: stretch;
+  justify-content: center;
+  justify-items: center;
 }
 
 .SkillCard img {
@@ -378,8 +391,11 @@ body {
 }
 
 .SkillCard {
-  width: 30%; /* Set a percentage width */
-  padding: 3%; /* Set a percentage padding */
+  width: 60%;
+  height: 160px;
+  /* Set a percentage width */
+  padding: 3%;
+  /* Set a percentage padding */
   margin-bottom: 20px;
   background: rgba(255, 255, 255, 0.44);
   background: rgba(255, 255, 255, 0.57);
@@ -396,6 +412,7 @@ body {
   color: #f4f4f4;
   font-size: 80px;
   display: inline-block;
+  margin: auto;
   margin-bottom: 20px;
   padding: 20px;
   background: rgba(255, 255, 255, 0.44);
@@ -407,16 +424,15 @@ body {
   box-sizing: border-box;
 }
 
-.ContactContainer{
+.ContactContainer {
   position: relative;
   top: 1900px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 100%; 
-  margin-left: 80px;
-  margin-right: 40px;
-  justify-content: center; 
+  max-width: 100%;
+  margin: auto;
+  justify-content: center;
   align-items: center;
 }
 
@@ -437,19 +453,20 @@ body {
   padding-left: 40px;
   padding-right: 40px;
 }
+
 .ContactHeader {
-  top: 1900px; 
+  top: 1900px;
   text-align: center;
   margin-bottom: 20px;
   position: relative;
-  left: 20px;
+
 }
 
 .ContactCard form label {
   display: block;
   font-size: 16px;
   margin-bottom: 8px;
-  
+
 }
 
 .ContactCard form input,
@@ -464,7 +481,7 @@ body {
 }
 
 .ContactCard form textarea {
-  resize: vertical; 
+  resize: vertical;
 }
 
 .ContactCard form button {
@@ -476,7 +493,7 @@ body {
   cursor: pointer;
   font-size: 18px;
   transition: background-color 0.3s ease;
-  
+
 }
 
 .ContactCard form button:hover {
@@ -484,12 +501,12 @@ body {
 }
 
 .ContactCard h3 {
-  text-align: center; 
+  text-align: center;
   color: #7f2982;
 }
 
 .ContactCard h2 {
-  text-align: center; 
+  text-align: center;
   color: #7f2982;
 }
 
@@ -503,17 +520,20 @@ body {
 
 @media (max-width: 767px) {
   .header {
-    position: relative; /* Remove fixed position for smaller screens */
+    position: relative;
+    justify-content: space-between;
   }
 
   .ProjectsContainer {
-    justify-content: center; /* Center projects horizontally */
-    text-align: center; /* Center projects within container */
+    justify-content: center;
+    text-align: center;
+
   }
 
   .ProjectCard {
     white-space: normal;
     width: 100%;
+    flex: auto;
   }
 
   .ProjectImageContainer {
@@ -522,7 +542,8 @@ body {
   }
 
   .header ul {
-    display: none; /* Hide the menu by default for smaller screens */
+    display: none;
+    /* Hide the menu by default for smaller screens */
     position: absolute;
     top: 100%;
     left: 0;
@@ -533,35 +554,40 @@ body {
     backdrop-filter: blur(9.5px);
     -webkit-backdrop-filter: blur(9.5px);
   }
+
   .header li {
     float: none;
     width: 100%;
     text-align: center;
   }
+
   .header li a {
     display: block;
     padding: 15px 20px;
     text-decoration: none;
   }
+
   .header .menu-btn {
     display: block;
     position: absolute;
     top: 15px;
     right: 20px;
   }
-  .header .menu-btn:checked ~ .menu {
+
+  .header .menu-btn:checked~.menu {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   .ContactContainer {
-    width: 100%; 
-    max-width: none; 
+    width: 100%;
+    max-width: none;
     margin-left: 0;
-    margin-right: 0; 
-    padding-left: 0; 
-    padding-right: 0; 
-    box-sizing: border-box; 
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
     text-align: center;
   }
 
@@ -569,9 +595,9 @@ body {
     display: block;
     font-size: 16px;
     margin-bottom: 8px;
-    
+
   }
-  
+
   .ContactCard form input,
   .ContactCard form textarea {
     width: 95%;
@@ -582,11 +608,11 @@ body {
     font-size: 16px;
     margin-left: 10px;
   }
-  
+
   .ContactCard form textarea {
-    resize: vertical; 
+    resize: vertical;
   }
-  
+
   .ContactCard form button {
     background-color: #7f2982;
     color: #f4f4f4;
@@ -596,26 +622,32 @@ body {
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s ease;
-    
+
   }
-  
+
+  .ContactCard{
+    width: 80%;
+  }
+
   .ContactCard form button:hover {
     background-color: #7f29826e;
   }
-  
+
   .ContactCard h3 {
-    text-align: center; 
+    text-align: center;
     color: #7f2982;
   }
-  
+
   .ContactCard h2 {
-    text-align: center; 
+    text-align: center;
     color: #7f2982;
   }
 
   .SkillCard {
-    width: 200px; /* Set a fixed width */
-    height: 200px; /* Set a fixed height */
+    width: 200px;
+    /* Set a fixed width */
+    height: 200px;
+    /* Set a fixed height */
     margin-bottom: 20px;
     padding: 20px;
     background: rgba(255, 255, 255, 0.44);
@@ -628,13 +660,10 @@ body {
     text-align: center;
   }
 
-  .SkillsContainer{
+  .SkillsContainer {
     margin: 0 !important;
   }
 
-  .ContactHeader{
-    width: 90%;
-  }
 }
 
 
@@ -644,35 +673,29 @@ body {
     position: fixed;
     z-index: 3;
   }
+
   .header ul {
     display: flex;
     margin-left: auto;
   }
+
   .header li {
     float: left;
   }
+
   .header li a {
     padding: 20px 30px;
   }
+
   .header .menu-btn {
     display: none;
   }
+
   .header .menu {
     display: flex;
     flex-direction: row;
     max-height: none;
   }
 
-  
-}
 
-/* Larger screens */
-@media (min-width: 1200px) {
-  .ProjectsContainer,
-  .SkillsContainer,
-  .ContactContainer {
-    margin-left: 120px;
-    margin-right: 80px;
-  }
 }
-
